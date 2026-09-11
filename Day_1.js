@@ -169,3 +169,41 @@ function sum(a){
   console.log(s)
 }
 sum([1,2,4,5,3,5,4])
+
+
+
+/* mini task
+Create a simple Student Result Program using JavaScript.
+It should take student name and marks for 5 subjects and calculate:
+Total
+Percentage
+Grade
+Pass/Fail
+*/
+function pf(a){
+  return (a>=45)?"Pass":"Fail"
+}
+function per(a){
+  let m=0
+  for(let i of a)m+=i
+  return m/5
+}
+function gr(a){
+  if(a>90)return "O"
+  else if(a>80)return "A+"
+  else if(a>70)return "A"
+  else if(a>60)return "B+"
+  else if(a>50)return "B"
+  else if(a>45)return "C"
+  else return "Arrear"
+}
+function gen(a,b,c,d){
+  console.log(`Name : ${a}\nPercentage : ${b}\nResult : ${c}\nGrade : ${d}`)
+}
+name=prompt()
+mark=[]
+for(let i=0;i<5;i++)mark.push(Number(prompt()))
+let percentage=per(mark)
+let res=pf(percentage)
+let grade=gr(percentage)
+gen(name,percentage,res,grade)
