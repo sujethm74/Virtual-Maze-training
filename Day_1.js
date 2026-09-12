@@ -10,6 +10,8 @@ oRe(a)
 console.log(((Number(prompt()))%2==0)? "Even":"Odd")
 
 
+
+
 //2)Find the largest of 3 numbers.
 //A(integer)
 function lar(a,b,c){
@@ -30,6 +32,8 @@ function lar(a){
 lar([2,3,5])
 
 
+
+
 //3)Reverse a string.
 //A(normal)
 function rev(a){
@@ -41,6 +45,8 @@ rev("King")
 //B(built in)
 let a=prompt().split('');
 console.log(a.reverse().join(''))
+
+
 
 
 //4)Find factorial of a number.
@@ -60,6 +66,8 @@ function fact(a){
 }
 let res=fact(Number(prompt()))
 console.log(res)
+
+
 
 
 //5)Check whether a number is prime.
@@ -100,6 +108,7 @@ prime(Number(prompt()),Number(prompt()))
 
 
 
+
 //6)Print Fibonacci series.
 function fib(a){
   if(a<1)return
@@ -115,6 +124,8 @@ function fib(a){
   console.log(arr)
 }
 fib(Number(prompt()))
+
+
 
 
 //7)Find the largest and smallest number in an array.
@@ -138,6 +149,8 @@ function maxmin(a){
 maxmin([6,4,8,3,9])
 
 
+
+
 //8)Remove duplicate values from an array.
 function rdup(a){
   let arr=[]
@@ -147,6 +160,8 @@ function rdup(a){
   console.log(arr)
 }
 rdup([23,3,5,7,4,3,4,5,4,1])
+
+
 
 
 //9)Count vowels in a string.
@@ -162,6 +177,8 @@ function cvow(a){
 cvow(prompt())
 
 
+
+
 //10)Find the sum of all numbers in an array.
 function sum(a){
   let s=0
@@ -169,6 +186,7 @@ function sum(a){
   console.log(s)
 }
 sum([1,2,4,5,3,5,4])
+
 
 
 
