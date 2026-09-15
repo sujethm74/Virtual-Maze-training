@@ -1,0 +1,103 @@
+//1) Find the Second Largest Number
+function seclar(a){
+  let l=-Infinity
+  let sl=-Infinity
+  for(let i of a){
+    if(i>l){
+      sl=l
+      l=i
+    }
+    else if(i<l && i>sl)sl=i
+  }
+  return sl
+}
+let size=Number(prompt())
+let arr=[]
+for(let i=0;i<size;i++)arr.push(Number(prompt()))
+let res=seclar(arr)
+console.log(res)
+
+
+
+//2)Find Duplicate Values
+function dup(a){
+  let m=new Map();
+  let duplicate=[]
+  for(let i of a)m.set(i,(m.get(i)||0)+1)
+  for(let i of m.keys()){
+    if(m.get(i)>1)duplicate.push(i)
+  }
+  console.log(`the duplicates are ${duplicate}`)
+}
+let size=Number(prompt())
+let arr=[]
+for(let i=0;i<size;i++)arr.push(Number(prompt()))
+dup(arr)
+
+
+
+//3)Character Frequency
+function charfreq(a){
+  let m=new Map()
+  for(let i of a)m.set(i,(m.get(i)||0)+1)
+  console.log(m)
+}
+let str=prompt()
+charfreq(str)
+
+
+
+//4) Employee Filter – Salary > ₹50,000
+function filt(a){
+  let emp=[]
+  for(let i of a){
+    if(i.salary>50000)emp.push(i)
+  }
+  console.log(emp)
+}
+let size=Number(prompt())
+let arr=[]
+for(let i=0;i<size;i++){
+  let name=prompt()
+  let salary=Number(prompt())
+  arr.push({name:name,salary:salary})
+}
+filt(arr)
+
+
+
+//5)Calculate Total Salary using reduce()
+function tsal(a){
+  return a.reduce((p,c)=>{return p+c.salary;},0)
+}
+let size=Number(prompt())
+let arr=[]
+for(let i=0;i<size;i++){
+  let name=prompt()
+  let salary=Number(prompt())
+  arr.push({name:name,salary:salary})
+}
+let total_salary=tsal(arr)
+console.log(total_salary)
+
+
+
+//6)Product Sorting – Low → High / High → Low
+function arrange(a){
+  let ip=prompt(`Enter "asc" for Ascending and "desc" for Descending order : `)
+  if(ip==="asc"){
+    a.sort((c,n)=>c.price-n.price)
+  }
+  else{
+    a.sort((c,n)=>n.price-c.price)
+  }
+  console.log(a)
+}
+let size=Number(prompt())
+let arr=[]
+for(let i=0;i<size;i++){
+  let name=prompt()
+  let price=Number(prompt())
+  arr.push({name:name,price:price})
+}
+arrange(arr)
