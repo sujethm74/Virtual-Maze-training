@@ -55,6 +55,7 @@ function renderFilteredTable(data) {
       <td>${s.name}</td>
       <td>${s.email}</td>
       <td>${s.age}</td>
+      <td>${s.gender}</td>
       <td>${s.dept}</td>
       <td>${s.tamil}</td>
       <td>${s.english}</td>
@@ -125,6 +126,7 @@ if (form) {
       document.getElementById("name").value = s.name;
       document.getElementById("email").value = s.email;
       document.getElementById("age").value = s.age;
+      document.getElementById("gender").value=s.gender;
       document.getElementById("dept").value = s.dept;
       document.getElementById("tamil").value = s.tamil;
       document.getElementById("english").value = s.english;
@@ -140,6 +142,7 @@ if (form) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const age = document.getElementById("age").value;
+    const gender=document.getElementById("gender").value;
     const dept = document.getElementById("dept").value;
     const tamil = Number(document.getElementById("tamil").value);
     const english = Number(document.getElementById("english").value);
@@ -176,7 +179,7 @@ if (form) {
         if (s.id == editId) {
           return {
             id: Number(editId),
-            name, email, age, dept,
+            name, email, age, gender, dept,
             tamil, english, maths, physics, chemistry, csbio,
             total, avg
           };
@@ -189,7 +192,7 @@ if (form) {
     else {
       students.push({
         id: Date.now(),
-        name, email, age, dept,
+        name, email, age, gender, dept,
         tamil, english, maths, physics, chemistry, csbio,
         total, avg
       });
