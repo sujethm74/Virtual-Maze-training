@@ -8,13 +8,13 @@
 <h1>Add Student</h1>
 <form id="studentForm">
     <p>Name :
-  <input type="text" id="name" placeholder="eg. Mikey" required><br><br>
+  <input type="text" id="name" pattern="[A-Za-z\s]+" placeholder="eg. Mikey" required><br><br>
   Email :
   <input type="email" id="email" placeholder="eg. mikey@gmail.com" required><br><br>
   Age :
   <input type="number" id="age" placeholder="eg. 18" min="0" max="150" required><br><br>
   Gender:
-  <input type="text" id="gender" placeholder="eg. M/F" maxlength="1" required><br><br>
+  <input type="text" id="gender" placeholder="eg. M|F" maxlength="1" required><br><br>
   Dept :
   <input type="text" id="dept" placeholder="eg. AI&DS" required><br><br>
   Tamil :
