@@ -3,7 +3,7 @@ let students = JSON.parse(localStorage.getItem("students")) || [];
 function saveToLocalStorage() {
   localStorage.setItem("students", JSON.stringify(students));
 }
-
+ 
 function getGrade(avg) {
   if (avg >= 90) return "O";
   else if (avg >= 80) return "A+";
